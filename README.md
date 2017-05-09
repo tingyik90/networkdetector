@@ -48,3 +48,19 @@ protected void onPause() {
 }
 ```
 
+## Download
+In the project Gradle:
+```Gradle
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
+In the app Gradle:
+```Gradle
+dependencies {
+    compile 'com.github.tingyik90:networkdetector:1.0'
+}
+```
