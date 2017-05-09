@@ -9,6 +9,8 @@ You can check the connectivity manually by
 boolean isNetworkConnected = networkDetector.isNetworkConnected();
 ```
 
+`isNetworkConnected` is checked via Android `ConnectivityManager` and the method `getActiveNetworkInfo().isConnected()`.
+
 If you would like to monitor the network status change, make your class implements `NetworkDetector.OnNetworkStatusChangeListener`. Build `networkDetector` as below.
 ```Java
 NetworkDetector networkDetector = new NetworkDetector.Builder(context)
