@@ -61,7 +61,7 @@ allprojects {
 In the app Gradle:
 ```Gradle
 dependencies {
-    compile 'com.github.tingyik90:networkdetector:1.0'
+    compile 'com.github.tingyik90:networkdetector:1.1'
 }
 ```
 
