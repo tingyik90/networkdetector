@@ -13,10 +13,7 @@ boolean isNetworkConnected = networkDetector.isNetworkConnected();
 
 If you would like to monitor the network status change, make your class implements `NetworkDetector.OnNetworkStatusChangeListener`. Build `networkDetector` as below.
 ```Java
-NetworkDetector networkDetector = new NetworkDetector.Builder(context)
-            .addOnNetworkStatusChangeListener(this)
-            .timeDelay(3000)        // optional, default = 0
-            .build();
+NetworkDetector networkDetector = new NetworkDetector(context, /*time delay*/ 3000L, /*OnNetworkStatusChangeListener*/ this);
 ```
 
 This will attach a `BroadcastReceiver` on `ConnectivityManager.CONNECTIVITY_ACTION`. Override your action in
@@ -61,7 +58,7 @@ allprojects {
 In the app Gradle:
 ```Gradle
 dependencies {
-    compile 'com.github.tingyik90:networkdetector:1.1'
+    compile 'com.github.tingyik90:networkdetector:1.2'
 }
 ```
 
