@@ -16,10 +16,7 @@ public class NetworkDetectorExtension implements NetworkDetector.OnNetworkStatus
 
     public NetworkDetectorExtension(Context context, View networkBarLayout) {
         this.networkBarLayout = networkBarLayout;
-        networkDetector = new NetworkDetector.Builder(context)
-                .addOnNetworkStatusChangeListener(this)
-                .timeDelay(3000)
-                .build();
+        networkDetector = new NetworkDetector(context, 3000, this);
     }
 
     public void start() {
